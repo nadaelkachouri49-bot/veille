@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIOPLANTS | Veille Cybersécurité</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <div class="logo-icon"></div>
+            <span>BIOPLANTS</span>
+        </div>
+        
+        <nav class="nav-menu">
+            <a href="#" class="nav-item active" data-section="dashboard">
+                <span class="nav-icon">■</span>
+                <span class="nav-text">Dashboard</span>
+            </a>
+            <a href="#" class="nav-item" data-section="sources">
+                <span class="nav-icon">▣</span>
+                <span class="nav-text">Sources</span>
+            </a>
+            <a href="#" class="nav-item" data-section="prompt">
+                <span class="nav-icon">▤</span>
+                <span class="nav-text">Prompt</span>
+            </a>
+            <a href="#" class="nav-item" data-section="workflow">
+                <span class="nav-icon">▥</span>
+                <span class="nav-text">Workflow</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="status-indicator">
+                <span class="status-dot"></span>
+                <span>SYSTÈME ACTIF</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <header class="top-bar">
+            <h1 class="page-title">VEILLE INFORMATIONNELLE CYBERSÉCURITÉ</h1>
+        </header>
+
+        <div class="content-wrapper">
+            <!-- DASHBOARD -->
+            <section id="dashboard" class="section active">
+                <div class="grid-3">
+                    <div class="quick-access-card">
+                        <div class="card-header">
+                            <h2>FEEDLY</h2>
+                            <span class="card-status">Flux RSS</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-description">Consultation des sources de veille et articles récents</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://feedly.com" target="_blank" class="btn-primary">ACCÉDER À FEEDLY</a>
+                        </div>
+                    </div>
+
+                    <div class="quick-access-card">
+                        <div class="card-header">
+                            <h2>PERPLEXITY</h2>
+                            <span class="card-status">Recherche IA</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-description">Recherche approfondie et analyse de menaces</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://www.perplexity.ai" target="_blank" class="btn-primary">ACCÉDER À PERPLEXITY</a>
+                        </div>
+                    </div>
+
+                    <div class="quick-access-card">
+                        <div class="card-header">
+                            <h2>PROMPT COPILOT</h2>
+                            <span class="card-status">Générateur</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-description">Template de rédaction newsletter automatisé</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn-primary" id="goToPrompt">ACCÉDER AU PROMPT</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workflow-overview">
+                    <h2>PROCESSUS HEBDOMADAIRE</h2>
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <div class="step-number">01</div>
+                            <div class="step-content">
+                                <h3>COLLECTE</h3>
+                                <p>Consultation Feedly</p>
+                            </div>
+                        </div>
+                        <div class="process-arrow">→</div>
+                        <div class="process-step">
+                            <div class="step-number">02</div>
+                            <div class="step-content">
+                                <h3>ANALYSE</h3>
+                                <p>Vérification pertinence</p>
+                            </div>
+                        </div>
+                        <div class="process-arrow">→</div>
+                        <div class="process-step">
+                            <div class="step-number">03</div>
+                            <div class="step-content">
+                                <h3>RÉDACTION</h3>
+                                <p>Génération Copilot</p>
+                            </div>
+                        </div>
+                        <div class="process-arrow">→</div>
+                        <div class="process-step">
+                            <div class="step-number">04</div>
+                            <div class="step-content">
+                                <h3>DIFFUSION</h3>
+                                <p>Publication Outlook</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SOURCES -->
+            <section id="sources" class="section">
+                <div class="section-header">
+                    <h2>SOURCES DE VEILLE</h2>
+                    <p>Flux RSS à intégrer dans Feedly</p>
+                </div>
+
+                <div class="sources-grid">
+                    <div class="source-category">
+                        <h3>INSTITUTIONNELS FRANCE</h3>
+                        <div class="source-list">
+                            <div class="source-item">
+                                <span class="source-name">ANSSI</span>
+                                <span class="source-type">Alertes officielles</span>
+                            </div>
+                            <div class="source-item">
+                                <span class="source-name">CERT-FR</span>
+                                <span class="source-type">Bulletins techniques</span>
+                            </div>
+                            <div class="source-item">
+                                <span class="source-name">CyberMalveillance</span>
+                                <span class="source-type">Prévention PME</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="source-category">
+                        <h3>MÉDIAS SPÉCIALISÉS</h3>
+                        <div class="source-list">
+                            <div class="source-item">
+                                <span class="source-name">Zataz</span>
+                                <span class="source-type">Actualités cyber</span>
+                            </div>
+                            <div class="source-item">
+                                <span class="source-name">LeMagIT</span>
+                                <span class="source-type">Analyses techniques</span>
+                            </div>
+                            <div class="source-item">
+                                <span class="source-name">Next INpact</span>
+                                <span class="source-type">Tech & sécurité</span>
+                            </div>
+                            <div class="source-item">
+                                <span class="source-name">Bleeping Computer</span>
+                                <span class="source-type">Menaces globales</span>
+                            </div>
+                            <div class="source-item">
+                                <span class="source-name">The Hacker News</span>
+                                <span class="source-type">Breaking news</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="source-category">
+                        <h3>PRESSE TECH</h3>
+                        <div class="source-list">
+                            <div class="source-item">
+                                <span class="source-name">Le Monde Informatique</span>
+                                <span class="source-type">Entreprises</span>
+                            </div>
+                            <div class="source-item">
+                                <span class="source-name">L'Usine Digitale</span>
+                                <span class="source-type">Industrie</span>
+                            </div>
+                            <div class="source-item">
+                                <span class="source-name">Les Echos Tech</span>
+                                <span class="source-type">Business</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="source-category">
+                        <h3>INTERNATIONAL</h3>
+                        <div class="source-list">
+                            <div class="source-item">
+                                <span class="source-name">CISA</span>
+                                <span class="source-type">USA Cybersecurity</span>
+                            </div>
+                            <div class="source-item">
+                                <span class="source-name">ENISA</span>
+                                <span class="source-type">EU Agency</span>
+                            </div>
+                            <div class="source-item">
+                                <span class="source-name">NCSC UK</span>
+                                <span class="source-type">UK Centre</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROMPT -->
+            <section id="prompt" class="section">
+                <div class="section-header">
+                    <h2>PROMPT COPILOT</h2>
+                    <p>Template de génération newsletter</p>
+                </div>
+
+                <div class="prompt-container">
+                    <div class="prompt-actions">
+                        <button class="btn-copy" id="copyPromptBtn">COPIER LE PROMPT</button>
+                        <span class="copy-status" id="copyStatus"></span>
+                    </div>
+                    
+                    <div class="prompt-box" id="promptContent">TU ES :
+Un rédacteur interne chargé de la prévention en cybersécurité au sein de l'entreprise Bioplants (PME).
+Tu produis une newsletter interne diffusée via la messagerie professionnelle.
+
+POSITIONNEMENT ÉDITORIAL :
+Cette newsletter est une INFORMATION INTERNE À DESTINATION DES ÉQUIPES.
+Elle adopte un ton presse interne :
+- factuel
+- actuel
+- clair
+- rapide à lire
+L'article partagé est le cœur de l'information.
+La newsletter sert à contextualiser et à donner envie de lire.
+
+CONTEXTE GÉNÉRAL :
+- Une campagne de phishing simulée a déjà été réalisée.
+- Une réunion formative a déjà eu lieu.
+- Les thèmes déjà abordés sont :
+  phishing, ransomware, vol d'identifiants, intrusion, zero-day.
+- Les équipes ont déjà été sensibilisées.
+
+RÈGLE MAJEURE DE PERTINENCE (OBLIGATOIRE) :
+- Tu NE mentionnes les actions déjà menées (campagne, réunion, sensibilisation)
+  QUE SI l'article traite d'une attaque ou d'un scénario en lien direct
+  avec ces sujets.
+- Dans ce cas :
+  → Faire un rappel bref et naturel.
+  → Montrer que le sujet fait écho à ce qui a déjà été vu.
+  → Renforcer la compréhension, sans refaire la prévention.
+- SI l'article traite d'un autre sujet (nouvelle menace, autre vecteur,
+  autre type d'attaque ou autre angle) :
+  → NE PAS mentionner les actions passées.
+  → Ne pas forcer le lien.
+  → Rester centré sur l'information actuelle.
+- La règle absolue :
+  → Tout ce qui est écrit doit être utile, logique et adapté au thème.
+  → Aucune mention automatique ou décorative.
+
+OBJECTIF RÉEL :
+Partager une actualité cyber récente.
+Expliquer brièvement pourquoi elle concerne une PME comme Bioplants.
+Centraliser l'attention sur l'article partagé.
+Inviter clairement à la lecture pour comprendre le sujet plus en profondeur.
+
+STYLE OBLIGATOIRE :
+- Style presse interne / information équipe.
+- Ton neutre, professionnel, fluide.
+- Texte dynamique, direct.
+- UN SEUL PARAGRAPHE pour le contenu principal.
+- Phrases courtes.
+- Aucun ton alarmiste.
+- Aucune injonction.
+- Aucun rappel de gestes simples.
+
+INTERDICTIONS ABSOLUES (NE JAMAIS UTILISER) :
+concrètement
+globalement
+en effet
+cependant
+toutefois
+notamment
+par ailleurs
+ainsi
+afin de
+dans ce contexte
+il est important de
+il convient de
+cela permet de
+dans le cadre de
+en résumé
+en conclusion
+
+VERBES À BANNIR :
+permettre
+viser
+optimiser
+améliorer
+garantir
+assurer
+faciliter
+s'inscrire dans
+contribuer à
+
+MOTS "RAPPORT / DOSSIER" INTERDITS :
+démarche
+objectif
+enjeu
+stratégie
+processus
+cadre
+mise en place
+analyse
+approche
+structuré
+
+SI UN MOT FAIT "DOCUMENT ACADÉMIQUE" → TU LE SUPPRIMES.
+
+OBLIGATION SUR LE TITRE :
+- Tu dois proposer UN TITRE.
+- Le titre doit être :
+  → pertinent,
+  → informatif,
+  → directement lié à l'article partagé,
+  → style presse interne.
+- Pas de jargon.
+- Pas d'emoji.
+- Pas de titre vague.
+
+STRUCTURE OBLIGATOIRE DU RENDU :
+Le rendu doit être un EMAIL.
+Le contenu de la newsletter doit être clairement identifiable à l'intérieur du mail.
+Le texte ne doit pas remplacer l'article, mais servir d'introduction.
+
+FORME FINALE À RESPECTER :
+
+Subject :
+[TITRE DE LA NEWSLETTER – OBLIGATOIRE, PERTINENT]
+
+To :
+Équipe Bioplants
+
+Corps de l'email :
+
+Bonjour à toutes et à tous,
+
+[CONTENU DE LA NEWSLETTER — UN SEUL PARAGRAPHE]
+→ Ce paragraphe :
+- situe brièvement l'actualité cyber,
+- explique pourquoi elle peut concerner une PME comme Bioplants,
+- fait un lien avec les actions passées UNIQUEMENT si c'est pertinent,
+- reste volontairement non détaillé,
+- renvoie clairement vers l'article pour comprendre le sujet.
+
+À lire cette semaine :
+[TITRE DE L'ARTICLE À INSÉRER]
+Source : [SOURCE – site officiel ou média spécialisé]
+
+Phrase de fin neutre, type information interne,
+orientée vers la lecture de l'article.
+
+Signature :
+[Nom]
+[Fonction]
+
+ADN BIOPLANTS À FAIRE RESSENTIR (SANS LE DIRE) :
+PME
+Réalisme terrain
+Responsabilité collective
+Information partagée
+Continuité de l'activité
+
+RÈGLE FINALE :
+Si un lien est forcé → le texte est faux.
+Si une action passée est mentionnée sans rapport → le texte est faux.
+Si tout est cohérent, pertinent et centré sur l'article → le texte est validé.</div>
+                </div>
+            </section>
+
+            <!-- WORKFLOW -->
+            <section id="workflow" class="section">
+                <div class="section-header">
+                    <h2>PROCÉDURE COMPLÈTE</h2>
+                    <p>Workflow hebdomadaire de veille et diffusion</p>
+                </div>
+
+                <div class="workflow-steps">
+                    <div class="workflow-step">
+                        <div class="step-header">
+                            <span class="step-num">01</span>
+                            <h3>COLLECTE VIA FEEDLY</h3>
+                        </div>
+                        <div class="step-content">
+                            <ul>
+                                <li>Accéder à l'onglet "Today" dans Feedly</li>
+                                <li>Parcourir les articles récents</li>
+                                <li>Identifier un article pertinent</li>
+                                <li>Copier l'URL de l'article source</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="workflow-step">
+                        <div class="step-header">
+                            <span class="step-num">02</span>
+                            <h3>GÉNÉRATION AVEC COPILOT</h3>
+                        </div>
+                        <div class="step-content">
+                            <ul>
+                                <li>Ouvrir Microsoft Copilot</li>
+                                <li>Coller le prompt template</li>
+                                <li>Insérer l'URL de l'article</li>
+                                <li>Lancer la génération</li>
+                                <li>Vérifier la cohérence</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="workflow-step">
+                        <div class="step-header">
+                            <span class="step-num">03</span>
+                            <h3>PUBLICATION OUTLOOK</h3>
+                        </div>
+                        <div class="step-content">
+                            <ul>
+                                <li>Ouvrir Outlook</li>
+                                <li>Accéder à "Bulletins d'information"</li>
+                                <li>Créer une nouvelle édition</li>
+                                <li>Coller le contenu généré</li>
+                                <li>Ajouter le lien cliquable</li>
+                                <li>Enregistrer l'édition</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="workflow-step">
+                        <div class="step-header">
+                            <span class="step-num">04</span>
+                            <h3>DIFFUSION ÉQUIPE</h3>
+                        </div>
+                        <div class="step-content">
+                            <ul>
+                                <li>Ajouter tous les membres</li>
+                                <li>Vérification finale</li>
+                                <li>Envoyer la newsletter</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rules-container">
+                    <div class="rule-box rule-do">
+                        <h3>À RESPECTER</h3>
+                        <ul>
+                            <li>Ton factuel et professionnel</li>
+                            <li>Un seul paragraphe principal</li>
+                            <li>Phrases courtes</li>
+                            <li>Renvoyer vers l'article</li>
+                            <li>Contextualiser pour PME</li>
+                        </ul>
+                    </div>
+
+                    <div class="rule-box rule-dont">
+                        <h3>À ÉVITER</h3>
+                        <ul>
+                            <li>Ton alarmiste</li>
+                            <li>Vocabulaire académique</li>
+                            <li>Liens forcés</li>
+                            <li>Résumé détaillé</li>
+                            <li>Mots interdits</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
